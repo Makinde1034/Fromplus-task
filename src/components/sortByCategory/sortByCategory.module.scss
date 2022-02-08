@@ -1,0 +1,109 @@
+$borderColor : #BDBDBD;
+
+@mixin  display($justify-content,$align-items,$direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+   
+}
+
+.sort__wrap{
+    
+
+    .sort__select{
+        width: 150px;
+        height: 34px;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+        position: relative;
+        @include display(space-between, center, row);
+        padding-right: 16px;
+        padding-left: 16px;
+        transition: 0.2s;
+        cursor: pointer;
+        z-index: 4;
+
+        .title{
+            position: absolute;
+            top: -8px;
+            font-size: 10px;
+            background-color: white;
+            left: 13px;
+            padding: 0px 3px 0px 3px;
+            color: #BDBDBD;
+            transition: 0.2s;
+        }
+
+        .current{
+            font-size: 12px;
+        }
+
+        img{
+            height: 6px;
+        }
+    }
+    .sort__select:hover{
+        border: 1px solid  #08BD37;
+
+    }
+    .sort__select:hover .title{
+        color:#08BD37;
+        left: 20px;
+
+    }
+
+
+    .sort__dropdown{
+        // height: 30px;
+        border: 1px solid $borderColor;
+        width: 150px;
+        position: absolute;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        visibility: hidden;
+        z-index: 5;
+        background-color: white;
+        margin-top: -1px;
+        transform: translateY(-5px);
+        transition: 0.2s;
+        opacity: 0;
+     
+        div{
+
+            border-bottom:1px solid $borderColor;
+            padding: 10px;
+            cursor: pointer;
+            
+
+            p{
+                font-size: 12px;
+                font-weight: 500;
+            }
+           
+        }
+        div:hover p{
+            color: #08BD37;
+        }
+    }
+    .sort__dropdown__active{
+        visibility: visible;
+        transform: translateY(0px);
+        opacity: 1;
+ 
+    }
+}
+
+@media screen and (max-width:768px) {
+    .sort__wrap{
+        .sort__select{
+            width: 80px;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .sort__dropdown{
+            width: 80px;
+        }
+    }
+}

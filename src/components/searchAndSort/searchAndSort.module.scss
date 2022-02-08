@@ -1,0 +1,82 @@
+@mixin  display($justify-content,$align-items,$direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+   
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+
+    .nav__top{
+        width: 100%;
+        @include display(space-between, center, row );
+        padding: 0px 100px 0px 100px;
+        height: 100px;
+
+        .nav__input{
+            @include display(flex-start, center,row );
+            height: 40px;
+            border: 1px solid #BDBDBD;
+            border-radius: 3px;
+            width: 30%;
+            padding: 0px 10px 0px 10px;
+
+            input{
+                height: 100%;
+                border: none;
+                width: 100%;
+                outline: none;
+            }
+            
+        }
+
+        .sort{
+
+            display: flex;
+            span:nth-child(2){
+                margin: 0px 10px 0px 10px;
+            }
+
+            
+        
+        }
+    }
+
+    
+}
+
+@media screen and (max-width:768px) {
+    .nav{
+        padding-top: 30px;
+
+        .nav__top{
+            flex-direction: column;
+            width: 100%;
+            padding: 0px 20px 0px 20px;
+
+            .nav__input{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+     .nav{
+        padding-top: 30px;
+
+        .nav__top{
+            flex-direction: column;
+            width: 100%;
+            padding: 0px 20px 0px 20px;
+
+            .nav__input{
+                width: 100%;
+            }
+        }
+    }
+}
