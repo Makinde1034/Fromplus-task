@@ -1,7 +1,6 @@
-import React,{useState} from 'react';
+import React from 'react';
 import style from './searchAndSort.module.scss'
 import searcch from '../../assets/images/search-icon.png'
-import dropdwon from '../../assets/images/dropdown.png'
 import SortByCategory from '../sortByCategory/sortByCategory';
 import SortByAlphabets from '../sortByAlphabets/sortByAlphabets';
 import SortByDate from '../sortByDate/sortByDate';
@@ -10,7 +9,6 @@ import { useAppDispatch } from '../../state/hooks';
 
 function SearchAndSort() {
 
-	const [ searchField,setSearchFieild ] = useState("");
 	const dispatch = useAppDispatch()
 
 	const searchString = (e:any) =>{ //change to better name

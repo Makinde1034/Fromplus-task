@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 
 const usePagination = ( templatesPerPage:number, data:any ) =>{
     const [currentPage, setCurrentPage] = useState(1);

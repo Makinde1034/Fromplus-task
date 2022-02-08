@@ -1,10 +1,10 @@
 import { createSlice,PayloadAction } from '@reduxjs/toolkit'
-import { stat } from 'fs/promises'
-import { template,presentTemplate } from '../../types'
+import { template } from '../../types'
 import { filterByCategory } from '../../utils/filterCategories'
 import { order } from '../../utils/filterByOrder'
 import { searchTemplates } from '../../utils/searchTemplates'
 import { filtByDate } from '../../utils/filterByDate'
+
 
 
 
@@ -61,8 +61,8 @@ const templateSlice = createSlice({
         
         //filter by Order
         filterByOrder(state,action:PayloadAction<string>){
-            const orderTemplate = order(state.templates,action.payload);
-            state.templates = orderTemplate
+            const orderedTemplate = order(state.templates,action.payload);
+            state.templates = orderedTemplate
             state.order = action.payload
             
             
@@ -77,6 +77,7 @@ const templateSlice = createSlice({
         // filter by date
         filterByDate(state,action:PayloadAction<string>){
             const newFilteredState = filtByDate(state.filterStore,action.payload)
+            state.templates = newFilteredState
             state.date = action.payload
         }
 

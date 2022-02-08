@@ -3,7 +3,7 @@ import style from './sortByDate.module.scss'
 import dropdown from '../../assets/images/dropdown.png'
 import { useAppSelector,useAppDispatch } from '../../state/hooks';
 import { filterByDate, filterByOrder } from '../../state/template';
-import { filtByDate } from '../../utils/filterByDate';
+
 
 
 function SortByDate() {

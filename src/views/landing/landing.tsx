@@ -1,12 +1,10 @@
 import React,{useEffect} from 'react';
-import style from './landing.module.scss'
-import search from '../../assets/images/search-icon.png'
 import SearchAndSort from '../../components/searchAndSort/searchAndSort'
 import Templates from '../../components/templates/templates';
 import LoadingScreen from '../../components/loadingScreen/loadingScreen';
 import api from '../../api';
 import { useAppDispatch,useAppSelector } from '../../state/hooks';
-import { setTemplates, templatesRequest, templateRequestSuccess, templateRequestFailure } from '../../state/template';
+import { templatesRequest, templateRequestSuccess, templateRequestFailure } from '../../state/template';
 import Banner from '../../components/banner/banner';
 import { saveDefaultState } from '../../helpers/storage';
 
@@ -16,6 +14,7 @@ function Landing() {
 
     useEffect(()=>{
         getAllTemplates()
+        // eslint-disable-next-line 
     },[])
 
     const dispatch = useAppDispatch();
