@@ -45,10 +45,7 @@ const templateSlice = createSlice({
             state.loading = action.payload
         },
 
-        setTemplates(state,action:PayloadAction<template[]>){     
-            state.templates = action.payload
-            state.filterStore = action.payload
-        },
+    
         // Filter by category
         filterByCat(state,action:PayloadAction<string>){
         
@@ -86,6 +83,6 @@ const templateSlice = createSlice({
 
 })
 
-export const { setTemplates, templatesRequest, templateRequestFailure, templateRequestSuccess, filterByCat, filterByOrder,search, filterByDate  } = templateSlice.actions
+export const {  templatesRequest, templateRequestFailure, templateRequestSuccess, filterByCat, filterByOrder,search, filterByDate  } = templateSlice.actions
 
 export default templateSlice.reducer
