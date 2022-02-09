@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './paginate.module.scss'
-import arrowRight from '../../assets/images/fgf.png'
+import arrowRight from '../../assets/images/right-arrow.png'
+import arrowLeft from '../../assets/images/left-arrow.png'
+
 
 interface paginateProp{
     next : () => void,
@@ -14,7 +16,8 @@ function Paginate({next,maxPage,currentPage,prev}:paginateProp) {
     <div>
         <div className={style.paginate} >
             <div className={style.previous}>
-                <p onClick={()=>{prev()}}> Previous</p>
+                <img src={arrowLeft} alt="" />
+                <p onClick={()=>{prev()}}> Previous</p>  
             </div>
             <div className={style.center}>
                 <span>{currentPage}</span>

@@ -13,6 +13,7 @@ import { saveDefaultState } from '../../helpers/storage';
 function Landing() {
 
     useEffect(()=>{
+                                                                   
         getAllTemplates()
         // eslint-disable-next-line 
     },[])
