@@ -28,7 +28,6 @@ function Landing() {
             dispatch( templatesRequest(true) )
 
             api.getTemplates().then((res)=>{
-                console.log(res.data.slice(0,2000));
                 // set templates
                 dispatch( templateRequestSuccess(res.data.slice(0,2000)) )
                 saveDefaultState( res.data.slice(0,2000) )
