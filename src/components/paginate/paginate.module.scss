@@ -9,7 +9,7 @@ $textColor : #3f3f3f;
     user-select: none;
     
     p{
-        color: #3f3f3f;
+        color: $textColor;
         font-weight: 500;
     }
 
@@ -42,7 +42,7 @@ $textColor : #3f3f3f;
         span{
             padding: 3px 10px;
             border-radius: 3px;
-            border: 2px solid #3f3f3f;
+            border: 2px solid $textColor;
         }
     }
 }

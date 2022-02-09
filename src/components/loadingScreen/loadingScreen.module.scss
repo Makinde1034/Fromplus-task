@@ -1,3 +1,6 @@
+$formPlusMainColor :#3EB9C9;
+$background : #e8e8e8;
+
 .loader{
     height: 100vh;
     width: 100%;
@@ -13,7 +16,7 @@
     .line{
         height: 3px;
         width: 200px;
-        background: #e8e8e8;
+        background: $background;
         border-radius: 3px;
         
     }  
@@ -21,7 +24,7 @@
     .inner{
         width: 100%;
         height: inherit;
-        background: #3EB9C9;
+        background: $formPlusMainColor;
         animation: slide 2s ease-in-out infinite;
         border-radius: 3px;
     }

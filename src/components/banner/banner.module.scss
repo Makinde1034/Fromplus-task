@@ -1,3 +1,6 @@
+
+$background : #fff4ea;
+
 .banner{
     height: 50px;
     padding-left: 100px;
@@ -7,7 +10,7 @@
     margin: 50px 0px 50px 0px;
     
     .banner__in{
-        background-color: #fff4ea;
+        background-color: $background;
         height: 100%;
         width: 100%;
         display: flex;
