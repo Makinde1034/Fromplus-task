@@ -1,6 +1,6 @@
 # Fromplus front-end task
 
-Link to project [form-pus-task](https://makinde-formplus-task.netlify.app/).
+Link to project [form-plus-task](https://makinde-formplus-task.netlify.app/).
 
 ## Tools used :
 
