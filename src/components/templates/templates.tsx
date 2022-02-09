@@ -27,7 +27,6 @@ function Templates() {
                 <header className={style.header}>
                     <p >{presentTemplateName} templates</p>
                     <p>{templates.length} templates found</p>
-                    <p>test</p>
                 </header>
                 <div className={style.templates}>
                 
