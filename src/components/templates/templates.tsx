@@ -3,7 +3,7 @@ import style from './templates.module.scss'
 import { useAppSelector } from '../../state/hooks';
 import usePagination from '../../hooks/usePagination';
 import Paginate from '../paginate/paginate';
-import { template } from '../../types';
+import { template } from '../../types'; 
 
 
 
@@ -25,26 +25,25 @@ function Templates() {
             
             <div className={style.templates__wrap}>
                 <header className={style.header}>
-                    <p>{presentTemplateName} templates</p>
+                    <p >{presentTemplateName} templates</p>
                     <p>{templates.length} templates found</p>
+                    <p>test</p>
                 </header>
                 <div className={style.templates}>
                 
                     {
                         data.map((item:template,index:number)=>(
-                            <div  className={style.box}>
+                            <div key={index} data-testid = {`template-${index}`}  className={style.box}>
                                 <div className={style.box__top}>
                                     <h3>{item.name}</h3>
                                     <p>{item.description}</p>
                                 </div>
-                                <div className={style.box__bottom}>
-                                    <p>Use template</p>
+                                <div className={style.box__bottom}> 
+                                    <p>Use template</p>  
                                 </div>
                             </div>
                         ))
-                    }
-                    
-                    
+                    }    
                 </div>
                 <Paginate next = {next} maxPage={maxPage} currentPage={currentPage} prev={prev}   />
             </div>

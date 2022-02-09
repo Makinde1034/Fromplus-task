@@ -34,7 +34,7 @@ function Landing() {
                 saveDefaultState( res.data.slice(0,2000) )
 
             }).catch((err)=>{
-                // incase error occurs while fetching templates
+                // incase error occurs while fetching templates 
                 dispatch( templateRequestFailure(false) )
             })
         })
