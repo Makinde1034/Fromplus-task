@@ -40,6 +40,20 @@ function Landing() {
         })
     }
 
+    // const getAllTemplates = async () =>{
+    //     try{
+
+    //         dispatch( templatesRequest(true) )
+    //         const templates = await api.getTemplates();
+    //         console.log(templates)
+    //         saveDefaultState( templates.data)
+    //         dispatch( templateRequestSuccess(templates.data ) )
+
+    //     }catch(error){
+    //         dispatch( templateRequestFailure(false) )
+    //     }
+    // }
+
     return (
 
         <div>

@@ -23,7 +23,7 @@ interface templateStateProp{
 const initialState : templateStateProp = {
     templates : [],
     loading : false,
-    filterStore : [], //change  to better name
+    filterStore : [], //change  to better name (used to filter the store, dosen't change)
     name : "All",    // change name to presentCategory
     order : "Default",
     date : "Default",
@@ -52,7 +52,6 @@ const templateSlice = createSlice({
         filterByCat(state,action:PayloadAction<string>){
         
             const newFilteredState = filterByCategory(action.payload, state.filterStore);
-            console.log(newFilteredState)
             state.templates = newFilteredState
             state.name = action.payload
                  
@@ -60,7 +59,7 @@ const templateSlice = createSlice({
         
         //filter by Order
         filterByOrder(state,action:PayloadAction<string>){
-            const orderedTemplate = order(state.templates,action.payload);
+            const orderedTemplate = order(state.filterStore,action.payload);
             state.templates = orderedTemplate
             state.order = action.payload
             
