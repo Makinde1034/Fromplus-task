@@ -40,7 +40,6 @@ function Templates() {
                                 </div>
                                 <div className={style.box__bottom}> 
                                     <p>Use template</p>
-                                    <p>{new Date(item.created).toDateString()}</p>
                                 </div>
                             </div>
                         ))
