@@ -11,9 +11,13 @@ function Sort() {
     const dispatch = useAppDispatch()
     const presentCategory = useAppSelector((state)=>state.templateReducer.name)
 
+
+
     const filterByCategory = (category:string) =>{
         dispatch( filterByCat(category) );
     }
+
+    
 
     return (
     <div onClick={()=>openCategory(!category)} className={style.sort__wrap}>

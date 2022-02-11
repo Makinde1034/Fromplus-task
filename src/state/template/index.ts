@@ -15,7 +15,8 @@ interface templateStateProp{
     filterStore : template[]
     name : string,
     order : string,
-    date : string
+    date : string,
+    currentPage : number
        
 }
 
@@ -25,7 +26,8 @@ const initialState : templateStateProp = {
     filterStore : [], //change  to better name
     name : "All",    // change name to presentCategory
     order : "Default",
-    date : "Default"
+    date : "Default",
+    currentPage : 1
 
 }
 
@@ -76,7 +78,9 @@ const templateSlice = createSlice({
             const newFilteredState = filtByDate(state.filterStore,action.payload)
             state.templates = newFilteredState
             state.date = action.payload
-        }
+        },
+
+       
 
      
     }

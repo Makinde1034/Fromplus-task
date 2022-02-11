@@ -1,8 +1,11 @@
 import {useState} from 'react'
+import { useAppSelector } from '../state/hooks';
 
 const usePagination = ( templatesPerPage:number, data:any ) =>{
     const [currentPage, setCurrentPage] = useState(1);
-    const maxPage = Math.ceil(data.length / templatesPerPage)
+    const maxPage = Math.ceil(data.length / templatesPerPage);
+
+    
     
 
     const currentTemplates = () => {
@@ -26,8 +29,12 @@ const usePagination = ( templatesPerPage:number, data:any ) =>{
         setCurrentPage(Math.max(currentPage - 1,1))
     }
 
+    const test = () =>{
+        setCurrentPage(1)
+    }
 
-    return { currentPage, currentTemplates, paginate, maxPage,next, prev }
+
+    return { currentPage,setCurrentPage, currentTemplates, paginate, maxPage,next, prev, test }
 
 
 } 

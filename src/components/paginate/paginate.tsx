@@ -11,10 +11,12 @@ interface paginateProp{
     prev : () => void
 }
 
-function Paginate({next,maxPage,currentPage,prev}:paginateProp) {
-  return (
+function Paginate({next,maxPage,currentPage,prev}:paginateProp) {  
+
+    return (
+        
     <div>
-        <div className={style.paginate} >
+        <div className={style.paginate}>
             <div className={style.previous}>
                 <img src={arrowLeft} alt="" />
                 <p onClick={()=>{prev()}}> Previous</p>  

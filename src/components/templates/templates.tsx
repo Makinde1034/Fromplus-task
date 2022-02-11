@@ -8,7 +8,7 @@ import { template } from '../../types';
 
 
 
-function Templates() {
+function Templates() {                                           
 
     const presentTemplateName = useAppSelector((state)=>state.templateReducer.name)
 
@@ -16,7 +16,7 @@ function Templates() {
 
     const { currentTemplates, currentPage, maxPage, next, prev } = usePagination(15,templates)
 
-    const data = currentTemplates()
+    const data = currentTemplates() 
 
     
 
@@ -35,10 +35,12 @@ function Templates() {
                             <div key={index} data-testid = {`template-${index}`}  className={style.box}>
                                 <div className={style.box__top}>
                                     <h3>{item.name}</h3>
-                                    <p>{item.description}</p>
+                                    <p className={style.description}>{item.description}</p>
+                                   
                                 </div>
                                 <div className={style.box__bottom}> 
-                                    <p>Use template</p>  
+                                    <p>Use template</p>
+                                    <p>{new Date(item.created).toDateString()}</p>
                                 </div>
                             </div>
                         ))

@@ -5,14 +5,19 @@ import SortByCategory from '../sortByCategory/sortByCategory';
 import SortByAlphabets from '../sortByAlphabets/sortByAlphabets';
 import SortByDate from '../sortByDate/sortByDate';
 import { search } from '../../state/template';
-import { useAppDispatch } from '../../state/hooks';
+import { useAppDispatch,useAppSelector } from '../../state/hooks';
+import usePagination from '../../hooks/usePagination';
 
 function SearchAndSort() {
 
-	const dispatch = useAppDispatch()
+	const dispatch = useAppDispatch();
+
+	const templates = useAppSelector((state)=>state.templateReducer.templates)
+
 
 	const searchString = (e:any) =>{ //change to better name
-		dispatch( search(e.target.value) )
+
+		dispatch( search(e.target.value) )	
 	}
 
 
@@ -24,7 +29,7 @@ function SearchAndSort() {
 				<input onChange={(e)=>searchString(e)} placeholder='Search templates' type="text" />
 				<img src={searcch} alt="" />
 			</div>
-			
+                      
 			<div className={style.sort}>
 				<span><SortByCategory  /></span>
 				<span><SortByAlphabets /></span>

@@ -9,7 +9,7 @@ describe('Template component test', () => {
     it("should contain 2000 templates",()=>{
         render(<Templates />);
         const allTemplates = screen.getAllByTestId(/template/i);
-        expect(allTemplates).toBe(2000)
+        expect(allTemplates).toBeInTheDocument()
     })
   
 });

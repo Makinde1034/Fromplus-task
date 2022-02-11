@@ -10,7 +10,7 @@ import { saveDefaultState } from '../../helpers/storage';
 
 
 
-function Landing() {
+function Landing() {                                              
 
     useEffect(()=>{
                                                                    
@@ -23,15 +23,15 @@ function Landing() {
 
 
     
-    const getAllTemplates = () =>{
-        return new Promise((resolve)=>{
+    const getAllTemplates = () =>{                                 
+        return new Promise((resolve)=>{                          
             // set loading state to true
             dispatch( templatesRequest(true) )
 
             api.getTemplates().then((res)=>{
                 // set templates
-                dispatch( templateRequestSuccess(res.data.slice(0,2000)) )
-                saveDefaultState( res.data.slice(0,2000) )
+                dispatch( templateRequestSuccess(res.data ) )
+                saveDefaultState( res.data)
 
             }).catch((err)=>{
                 // incase error occurs while fetching templates 
@@ -41,7 +41,9 @@ function Landing() {
     }
 
     return (
+
         <div>
+
             {   
                 isLoading 
                 ? 
