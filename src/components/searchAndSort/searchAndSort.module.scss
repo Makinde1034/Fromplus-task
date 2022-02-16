@@ -36,9 +36,25 @@
         .sort{
 
             display: flex;
-            span:nth-child(2){
-                margin: 0px 10px 0px 10px;
+            align-items: center;
+            .sort__p{
+                color: #989898;
+                font-size: 14px;
+                margin-right: 20px;
+                font-weight: 400;
+
             }
+            .sort__t{
+
+                display: flex;
+                align-items: center;
+                span:nth-child(2){
+                    margin: 0px 10px 0px 10px;
+                }
+
+
+            }
+            
 
             
         
@@ -55,12 +71,25 @@
         .nav__top{
             flex-direction: column;
             width: 100%;
+            height: auto;
             padding: 0px 20px 0px 20px;
 
             .nav__input{
                 width: 100%;
+            } 
+            
+            .sort{
+                flex-direction: column;
+                .sort__p{
+                    margin:10px 0px 10px 0px;
+                }
+                // .sort__t{
+                //     flex-direction: column;
+                // }
             }
         }
+
+       
     }
     
 }
@@ -77,6 +106,8 @@
             .nav__input{
                 width: 100%;
             }
+
+           
         }
     }
 }

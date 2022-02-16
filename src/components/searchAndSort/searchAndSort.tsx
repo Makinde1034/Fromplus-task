@@ -31,9 +31,13 @@ function SearchAndSort() {
 			</div>
                       
 			<div className={style.sort}>
-				<span><SortByCategory  /></span>
-				<span><SortByAlphabets /></span>
-				<span><SortByDate /></span>		
+				<p className={style.sort__p}>sort by :</p>
+				<div className={style.sort__t}>
+					<span><SortByCategory  /></span>
+					<span><SortByAlphabets /></span>
+					<span><SortByDate /></span>		
+				</div>
+					
 			</div> 
 		</div>
     </div>
