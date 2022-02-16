@@ -30,9 +30,9 @@ function SearchAndSort() {
 				<img src={searcch} alt="" />
 			</div>
                       
-			<div className={style.sort}>
+			<div className={style.sort__wrap}>
 				<p className={style.sort__p}>sort by :</p>
-				<div className={style.sort__t}>
+				<div className={style.sort}>
 					<span><SortByCategory  /></span>
 					<span><SortByAlphabets /></span>
 					<span><SortByDate /></span>		

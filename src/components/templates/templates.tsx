@@ -4,6 +4,7 @@ import { useAppSelector } from '../../state/hooks';
 import usePagination from '../../hooks/usePagination';
 import Paginate from '../paginate/paginate';
 import { template } from '../../types'; 
+import { capitalize } from '../../utils/capitalize'
 
 
 
@@ -34,7 +35,7 @@ function Templates() {
                         data.map((item:template,index:number)=>(
                             <div key={index} data-testid = {`template-${index}`}  className={style.box}>
                                 <div className={style.box__top}>
-                                    <h3>{item.name}</h3>
+                                    <h3>{capitalize(item.name)}</h3>
                                     <p className={style.description}>{item.description}</p>
                                    
                                 </div>
