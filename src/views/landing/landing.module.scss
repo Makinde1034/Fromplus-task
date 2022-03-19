@@ -7,28 +7,37 @@
 }
 
 .landing{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .landing__top{
-        height: 90px;
-        @include display(space-between, center, row );
-        padding: 0px 100px 0px 100px;
-
-        .landing__input{
-            @include display(flex-start, center,row );
-            height: 40px;
-            border: 1px solid #BDBDBD;
-            border-radius: 3px;
-            width: 30%;
-            padding: 0px 10px 0px 10px;
-            input{
-                height: 100%;
-                border: none;
-                width: 100%;
-                outline: none;
-            }
-            
-        }
+    .landing__in{
+        // background-color: red;
+        max-width: 1300px;
     }
+
+    // .landing__top{
+    //     height: 90px;
+    //     @include display(space-between, center, row );
+    //     padding: 0px 100px 0px 100px;
+
+    //     .landing__input{
+    //         @include display(flex-start, center,row );
+    //         height: 40px;
+    //         border: 1px solid #BDBDBD;
+    //         border-radius: 3px;
+    //         width: 30%;
+    //         padding: 0px 10px 0px 10px;
+    //         input{
+    //             height: 100%;
+    //             border: none;
+    //             width: 100%;
+    //             outline: none;
+    //         }
+            
+    //     }
+    // }
 }
 
 @media screen and (max-width:768px) {

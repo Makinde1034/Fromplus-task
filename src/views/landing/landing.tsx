@@ -7,6 +7,7 @@ import { useAppDispatch,useAppSelector } from '../../state/hooks';
 import { templatesRequest, templateRequestSuccess, templateRequestFailure } from '../../state/template';
 import Banner from '../../components/banner/banner';
 import { saveDefaultState } from '../../helpers/storage';
+import style from './landing.module.scss'
 
 
 
@@ -56,19 +57,22 @@ function Landing() {
 
     return (
 
-        <div>
+        <div className={style.landing}>
+            <div className={style.landing__in}>
+                {   
+                    isLoading 
+                    ? 
+                        <LoadingScreen />
+                    :
+                    <>
+                        <SearchAndSort />
+                        <Banner />
+                        <Templates />
+                    </>
+                }  
+            </div>
 
-            {   
-                isLoading 
-                ? 
-                    <LoadingScreen />
-                :
-                <>
-                    <SearchAndSort />
-                    <Banner />
-                    <Templates />
-                </>
-            }
+            
         </div>
     )
 }

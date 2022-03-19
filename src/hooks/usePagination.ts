@@ -9,11 +9,13 @@ const usePagination = ( templatesPerPage:number, data:any ) =>{
     
 
     const currentTemplates = () => {
-        const indexOfLastTemp = currentPage * templatesPerPage
-        const indexOfFirstTemp = indexOfLastTemp - templatesPerPage
-        const currentTemps = data.slice(indexOfFirstTemp,indexOfLastTemp);
+        const indexOfLastTran = currentPage * templatesPerPage
+        const indexOfFirstTran = indexOfLastTran - templatesPerPage
+        const currentTemps = data.slice(indexOfFirstTran,indexOfLastTran);
         return currentTemps
     }
+
+    
 
     const paginate = (pageNumber : number)  =>{
         setCurrentPage(pageNumber);
